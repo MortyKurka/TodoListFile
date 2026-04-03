@@ -17,4 +17,9 @@ public class TaskItem
         Title = title;
         Description = description;
     }
+
+    public override string ToString()
+    {
+        return $"==========\nЗадача №{Id}\nНазвание: {Title}\n-{Description}\nСрок: {DueData:dd}.{DueData:MM}.{DueData:yyyy}\nВыполнено: {(IsCompleted ? "✅": "❌")}\n==========";
+    }
 }
