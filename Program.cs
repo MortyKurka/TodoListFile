@@ -1,7 +1,9 @@
-﻿Console.Clear();
+﻿using Services;
+
+Console.Clear();
 Console.WriteLine("Приветствую! Это ваш Todo-лист с храненим задач в json");
-var manager = new TaskManager();
-await manager.LoadFileAsync("./Task.json");
+var manager = new TaskManager("./Task.json");
+manager.Start();
 string? input;
 while(true)
 {
@@ -46,6 +48,7 @@ while(true)
             string? inp_choose_red = Console.ReadLine();
             int inp_id;
             string? inp_red;
+            Console.Clear();
             switch(inp_choose_red)
             {
                 case "1":
@@ -86,9 +89,17 @@ while(true)
             break;
         case "5":
             Console.Clear();
+            Console.Write("Введите шаблон для поиска:> ");
+            string inp_src = Console.ReadLine();
+            foreach (var task in manager.Search(inp_src))
+            {
+                Console.WriteLine(task);
+            } 
             break;
         case "6":
             Console.Clear();
+            Console.WriteLine("Статистика: ");
+            Console.WriteLine(manager.GetStatistics());
             break;
         case "7":
             Console.Clear();
