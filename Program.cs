@@ -3,10 +3,20 @@
 Console.Clear();
 Console.WriteLine("Приветствую! Это ваш Todo-лист с храненим задач в json");
 var manager = new TaskManager("./Task.json");
-manager.Start();
+if (manager == null)
+{
+    Console.WriteLine("Ошибка запуска программы");
+    return;
+}
+await manager.Start();
 string? input;
 while(true)
 {
+    if (manager == null)
+    {
+        Console.WriteLine("Ошибка работы программы");
+        return;
+    }      
     Console.WriteLine("Меню: ");
     Console.WriteLine("1.Показать все задачи");
     Console.WriteLine("2.Добавить задачу");
@@ -15,27 +25,33 @@ while(true)
     Console.WriteLine("5.Поиск");
     Console.WriteLine("6.Статистика");
     Console.WriteLine("7.Выход");
-    Console.Write("> ");
-    input = Console.ReadLine();
+    input = SafeInput.GetString("> ");
+    int id;
     switch (input)
     {
         case "1":
             Console.Clear();
-            foreach (var task in manager.GetAll())
+            var tasks = manager.GetAll();
+            if (!tasks.Any())
             {
-                Console.WriteLine(task);
+                Console.WriteLine("Нет ни одной задачи!");
+            }
+            else
+            {
+                foreach (var task in tasks)
+                {
+                    Console.WriteLine(task);
+                }
             }
             break;
         case "2":
             Console.Clear();
-            Console.WriteLine("Введите название, описание, срок выполнения(dd:mm:yyyy) и важность(Low, Medium, Hard) задачи");
-            Console.Write("Название:> ");
-            string? title = Console.ReadLine();
-            Console.Write("Описание:> ");
-            string? description = Console.ReadLine();
-            Console.Write("Срок:> ");
-            string? dueData = Console.ReadLine();
-            await manager.AddAsync(title, dueData, description);
+            Console.WriteLine("Введите название, описание, срок выполнения(dd.mm.yyyy) и важность(Low, Medium, High) задачи");
+            string title = SafeInput.GetString("Название:> ");
+            string description = SafeInput.GetString("Описание:> ");
+            DateTime dueData = SafeInput.GetDate("Срок:> ");
+            Priority precedency = SafeInput.GetPriority("Важность:> ");;
+            await manager.AddAsync(title, dueData, precedency,description);
             break;
         case "3":
             Console.Clear();
@@ -43,57 +59,54 @@ while(true)
             Console.WriteLine("1.Название");
             Console.WriteLine("2.Описание");
             Console.WriteLine("3.Дату");
-            Console.WriteLine("4.Статус выполнения");
-            Console.Write("> ");
-            string? inp_choose_red = Console.ReadLine();
-            int inp_id;
-            string? inp_red;
-            Console.Clear();
+            Console.WriteLine("4.Важность");
+            Console.WriteLine("5.Статус выполнения");
+            string inp_choose_red = SafeInput.GetString("> ");
+            id = SafeInput.GetInt("Введите Id задачи:> "); 
             switch(inp_choose_red)
             {
                 case "1":
-                    Console.Write("Введите Id задачи:> ");
-                    int.TryParse(Console.ReadLine(), out inp_id);
-                    Console.Write("Введите новое название: ");
-                    inp_red = Console.ReadLine();
-                    await manager.UpdateTitleAsync(inp_id, inp_red);
+                    string new_title = SafeInput.GetString("Введите новое название:> ");
+                    await manager.UpdateTitleAsync(id, new_title);
                     break;
                 case "2":
-                    Console.Write("Введите Id задачи:> ");
-                    int.TryParse(Console.ReadLine(), out inp_id);
-                    Console.Write("Введите новое описание: ");
-                    inp_red = Console.ReadLine();
-                    await manager.UpdateDescriptionAsync(inp_id, inp_red);
+                    string new_description = SafeInput.GetString("Введите новое  описание:> ");
+                    await manager.UpdateDescriptionAsync(id, new_description);
                     break;
                 case "3":
-                    Console.Write("Введите Id задачи:> ");
-                    int.TryParse(Console.ReadLine(), out inp_id);
-                    Console.Write("Введите новый срок: ");
-                    inp_red = Console.ReadLine();
-                    await manager.UpdateDataAsync(inp_id, inp_red);
+                    DateTime new_date = SafeInput.GetDate("Введите новый срок:> ");
+                    await manager.UpdateDataAsync(id, new_date);
                     break;
                 case "4":
-                    Console.Write("Введите Id задачи:> ");
-                    int.TryParse(Console.ReadLine(), out inp_id);
-                    await manager.UpdateStatusAsync(inp_id);
+                    Priority new_priority = SafeInput.GetPriority("Введите новую важность:> ");
+                    await manager.UpdatePriorityAsync(id, new_priority);
+                    break;
+                case "5":
+                    await manager.UpdateStatusAsync(id);
                     break;
             }
             break;
         case "4":
             Console.Clear();
             Console.WriteLine("Введите Id задачи которую хотите удалить");
-            Console.Write("Id:> ");
-            int id;
-            int.TryParse(Console.ReadLine(), out id);
+            id = SafeInput.GetInt("Id:> ");
             manager?.RemoveAsync(id);
             break;
         case "5":
             Console.Clear();
-            Console.Write("Введите шаблон для поиска:> ");
-            string inp_src = Console.ReadLine();
-            foreach (var task in manager.Search(inp_src))
+            string inp_src = SafeInput.GetString("Введите шаблон для поиска:> ");
+            var searchs = manager.Search(inp_src);
+            Console.WriteLine($"Результат поиска по шаблону \"{inp_src}\"");
+            if (!searchs.Any())
             {
-                Console.WriteLine(task);
+                Console.WriteLine("Ничего не найдено");
+            }
+            else
+            {
+                foreach (var task in manager.Search(inp_src))
+                {
+                    Console.WriteLine(task);
+                }
             } 
             break;
         case "6":
