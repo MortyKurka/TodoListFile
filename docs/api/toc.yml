@@ -1,0 +1,26 @@
+### YamlMime:TableOfContent
+items:
+- uid: Models
+  name: Models
+  type: Namespace
+  items:
+  - uid: Models.Priority
+    name: Priority
+    type: Enum
+  - uid: Models.TaskItem
+    name: TaskItem
+    type: Class
+- uid: Services
+  name: Services
+  type: Namespace
+  items:
+  - uid: Services.FileManager
+    name: FileManager
+    type: Class
+  - uid: Services.SafeInput
+    name: SafeInput
+    type: Class
+  - uid: Services.TaskManager
+    name: TaskManager
+    type: Class
+memberLayout: SamePage

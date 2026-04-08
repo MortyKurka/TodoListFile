@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services
+  commentId: N:Services
+  id: Services
+  children:
+  - Services.FileManager
+  - Services.SafeInput
+  - Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: Services
+  nameWithType: Services
+  fullName: Services
+  type: Namespace
+  assemblies:
+  - todo-list-files
+references:
+- uid: Services.FileManager
+  commentId: T:Services.FileManager
+  href: Services.FileManager.html
+  name: FileManager
+  nameWithType: FileManager
+  fullName: Services.FileManager
+- uid: Services.SafeInput
+  commentId: T:Services.SafeInput
+  href: Services.SafeInput.html
+  name: SafeInput
+  nameWithType: SafeInput
+  fullName: Services.SafeInput
+- uid: Services.TaskManager
+  commentId: T:Services.TaskManager
+  href: Services.TaskManager.html
+  name: TaskManager
+  nameWithType: TaskManager
+  fullName: Services.TaskManager

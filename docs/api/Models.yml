@@ -1,0 +1,38 @@
+### YamlMime:ManagedReference
+items:
+- uid: Models
+  commentId: N:Models
+  id: Models
+  children:
+  - Models.Priority
+  - Models.TaskItem
+  langs:
+  - csharp
+  - vb
+  name: Models
+  nameWithType: Models
+  fullName: Models
+  type: Namespace
+  assemblies:
+  - todo-list-files
+references:
+- uid: Models.Priority
+  commentId: T:Models.Priority
+  parent: Models
+  href: Models.Priority.html
+  name: Priority
+  nameWithType: Priority
+  fullName: Models.Priority
+- uid: Models.TaskItem
+  commentId: T:Models.TaskItem
+  parent: Models
+  href: Models.TaskItem.html
+  name: TaskItem
+  nameWithType: TaskItem
+  fullName: Models.TaskItem
+- uid: Models
+  commentId: N:Models
+  href: Models.html
+  name: Models
+  nameWithType: Models
+  fullName: Models

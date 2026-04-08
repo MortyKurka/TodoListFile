@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: Models.Priority
+  commentId: T:Models.Priority
+  id: Priority
+  parent: Models
+  children:
+  - Models.Priority.High
+  - Models.Priority.Low
+  - Models.Priority.Medium
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: Priority
+  fullName: Models.Priority
+  type: Enum
+  source:
+    remote:
+      path: src/Models/Priority.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: Priority
+    path: src/Models/Priority.cs
+    startLine: 5
+  assemblies:
+  - todo-list-files
+  namespace: Models
+  summary: ''
+  example: []
+  syntax:
+    content: public enum Priority
+    content.vb: Public Enum Priority
+- uid: Models.Priority.Low
+  commentId: F:Models.Priority.Low
+  id: Low
+  parent: Models.Priority
+  langs:
+  - csharp
+  - vb
+  name: Low
+  nameWithType: Priority.Low
+  fullName: Models.Priority.Low
+  type: Field
+  source:
+    remote:
+      path: src/Models/Priority.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: Low
+    path: src/Models/Priority.cs
+    startLine: 10
+  assemblies:
+  - todo-list-files
+  namespace: Models
+  summary: ''
+  example: []
+  syntax:
+    content: Low = 0
+    return:
+      type: Models.Priority
+- uid: Models.Priority.Medium
+  commentId: F:Models.Priority.Medium
+  id: Medium
+  parent: Models.Priority
+  langs:
+  - csharp
+  - vb
+  name: Medium
+  nameWithType: Priority.Medium
+  fullName: Models.Priority.Medium
+  type: Field
+  source:
+    remote:
+      path: src/Models/Priority.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: Medium
+    path: src/Models/Priority.cs
+    startLine: 14
+  assemblies:
+  - todo-list-files
+  namespace: Models
+  summary: ''
+  example: []
+  syntax:
+    content: Medium = 1
+    return:
+      type: Models.Priority
+- uid: Models.Priority.High
+  commentId: F:Models.Priority.High
+  id: High
+  parent: Models.Priority
+  langs:
+  - csharp
+  - vb
+  name: High
+  nameWithType: Priority.High
+  fullName: Models.Priority.High
+  type: Field
+  source:
+    remote:
+      path: src/Models/Priority.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: High
+    path: src/Models/Priority.cs
+    startLine: 18
+  assemblies:
+  - todo-list-files
+  namespace: Models
+  summary: ''
+  example: []
+  syntax:
+    content: High = 2
+    return:
+      type: Models.Priority
+references:
+- uid: Models
+  commentId: N:Models
+  href: Models.html
+  name: Models
+  nameWithType: Models
+  fullName: Models
+- uid: Models.Priority
+  commentId: T:Models.Priority
+  parent: Models
+  href: Models.Priority.html
+  name: Priority
+  nameWithType: Priority
+  fullName: Models.Priority

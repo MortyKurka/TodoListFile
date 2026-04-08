@@ -1,0 +1,47 @@
+{
+  "README.html": {
+    "href": "README.html",
+    "title": "Простой todo лист с записью и чтением из JSON файле | Todo-list",
+    "summary": "Простой todo лист с записью и чтением из JSON файле Не знаю что писать тут, но проект готов и выполняет свои функции"
+  },
+  "docs/api/Models.Priority.html": {
+    "href": "docs/api/Models.Priority.html",
+    "title": "Enum Priority | Todo-list",
+    "summary": "Enum Priority Namespace Models Assembly todo-list-files.dll public enum Priority Fields High = 2 Low = 0 Medium = 1"
+  },
+  "docs/api/Models.TaskItem.html": {
+    "href": "docs/api/Models.TaskItem.html",
+    "title": "Class TaskItem | Todo-list",
+    "summary": "Class TaskItem Namespace Models Assembly todo-list-files.dll Тестовое название public class TaskItem Inheritance object TaskItem Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Constructors TaskItem() public TaskItem() TaskItem(string, DateTime, int, Priority, string) public TaskItem(string title, DateTime dueData, int id, Priority priority, string description) Parameters title string dueData DateTime id int priority Priority description string Properties Description public string Description { get; set; } Property Value string DueData public DateTime DueData { get; set; } Property Value DateTime Id public int Id { get; set; } Property Value int IsCompleted public bool IsCompleted { get; set; } Property Value bool IsOverDue public bool IsOverDue { get; } Property Value bool Precedency public Priority Precedency { get; set; } Property Value Priority Title public string Title { get; set; } Property Value string Methods ToString() public override string ToString() Returns string"
+  },
+  "docs/api/Models.html": {
+    "href": "docs/api/Models.html",
+    "title": "Namespace Models | Todo-list",
+    "summary": "Namespace Models Classes TaskItem Тестовое название Enums Priority"
+  },
+  "docs/api/Services.FileManager.html": {
+    "href": "docs/api/Services.FileManager.html",
+    "title": "Class FileManager | Todo-list",
+    "summary": "Class FileManager Namespace Services Assembly todo-list-files.dll public static class FileManager Inheritance object FileManager Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods LoadFileAsync<T>(string) public static Task<List<T>?> LoadFileAsync<T>(string filepath) Parameters filepath string Returns Task<List<T>> Type Parameters T SaveFileAsync<T>(string, List<T>) public static Task SaveFileAsync<T>(string filepath, List<T> Tasks) Parameters filepath string Tasks List<T> Returns Task Type Parameters T"
+  },
+  "docs/api/Services.SafeInput.html": {
+    "href": "docs/api/Services.SafeInput.html",
+    "title": "Class SafeInput | Todo-list",
+    "summary": "Class SafeInput Namespace Services Assembly todo-list-files.dll public static class SafeInput Inheritance object SafeInput Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetDate(string) public static DateTime GetDate(string prompt) Parameters prompt string Returns DateTime GetInt(string) public static int GetInt(string prompt) Parameters prompt string Returns int GetPriority(string) public static Priority GetPriority(string prompt) Parameters prompt string Returns Priority GetString(string) public static string GetString(string prompt) Parameters prompt string Returns string"
+  },
+  "docs/api/Services.TaskManager.html": {
+    "href": "docs/api/Services.TaskManager.html",
+    "title": "Class TaskManager | Todo-list",
+    "summary": "Class TaskManager Namespace Services Assembly todo-list-files.dll public class TaskManager Inheritance object TaskManager Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors TaskManager(string) public TaskManager(string filepath) Parameters filepath string Properties Tasks public List<TaskItem> Tasks { get; set; } Property Value List<TaskItem> Methods AddAsync(string, DateTime, Priority, string) public Task AddAsync(string title, DateTime dueData, Priority priority, string description = \"Нет описания\") Parameters title string dueData DateTime priority Priority description string Returns Task GetAll() public List<TaskItem> GetAll() Returns List<TaskItem> GetById(int) public TaskItem GetById(int id) Parameters id int Returns TaskItem Exceptions KeyNotFoundException GetByPriority() public void GetByPriority() GetByStatus(bool) public List<TaskItem> GetByStatus(bool status) Parameters status bool Returns List<TaskItem> Exceptions KeyNotFoundException GetStatistics() public string GetStatistics() Returns string RemoveAsync(int) public Task RemoveAsync(int id) Parameters id int Returns Task Search(string) public List<TaskItem> Search(string prompt) Parameters prompt string Returns List<TaskItem> Start() public Task Start() Returns Task UpdateDataAsync(int, DateTime) public Task UpdateDataAsync(int id, DateTime data) Parameters id int data DateTime Returns Task UpdateDescriptionAsync(int, string) public Task UpdateDescriptionAsync(int id, string description) Parameters id int description string Returns Task UpdatePriorityAsync(int, Priority) public Task UpdatePriorityAsync(int id, Priority priority) Parameters id int priority Priority Returns Task UpdateStatusAsync(int) public Task UpdateStatusAsync(int id) Parameters id int Returns Task UpdateTitleAsync(int, string) public Task UpdateTitleAsync(int id, string title) Parameters id int title string Returns Task"
+  },
+  "docs/api/Services.html": {
+    "href": "docs/api/Services.html",
+    "title": "Namespace Services | Todo-list",
+    "summary": "Namespace Services Classes FileManager SafeInput TaskManager"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | Todo-list",
+    "summary": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  }
+}

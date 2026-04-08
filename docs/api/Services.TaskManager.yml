@@ -1,0 +1,1209 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.TaskManager
+  commentId: T:Services.TaskManager
+  id: TaskManager
+  parent: Services
+  children:
+  - Services.TaskManager.#ctor(System.String)
+  - Services.TaskManager.AddAsync(System.String,System.DateTime,Models.Priority,System.String)
+  - Services.TaskManager.GetAll
+  - Services.TaskManager.GetById(System.Int32)
+  - Services.TaskManager.GetByPriority
+  - Services.TaskManager.GetByStatus(System.Boolean)
+  - Services.TaskManager.GetStatistics
+  - Services.TaskManager.RemoveAsync(System.Int32)
+  - Services.TaskManager.Search(System.String)
+  - Services.TaskManager.Start
+  - Services.TaskManager.Tasks
+  - Services.TaskManager.UpdateDataAsync(System.Int32,System.DateTime)
+  - Services.TaskManager.UpdateDescriptionAsync(System.Int32,System.String)
+  - Services.TaskManager.UpdatePriorityAsync(System.Int32,Models.Priority)
+  - Services.TaskManager.UpdateStatusAsync(System.Int32)
+  - Services.TaskManager.UpdateTitleAsync(System.Int32,System.String)
+  langs:
+  - csharp
+  - vb
+  name: TaskManager
+  nameWithType: TaskManager
+  fullName: Services.TaskManager
+  type: Class
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: TaskManager
+    path: src/Services/TaskManager.cs
+    startLine: 7
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public class TaskManager
+    content.vb: Public Class TaskManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Services.TaskManager.Tasks
+  commentId: P:Services.TaskManager.Tasks
+  id: Tasks
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: Tasks
+  nameWithType: TaskManager.Tasks
+  fullName: Services.TaskManager.Tasks
+  type: Property
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: Tasks
+    path: src/Services/TaskManager.cs
+    startLine: 20
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public List<TaskItem> Tasks { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Models.TaskItem}
+    content.vb: Public Property Tasks As List(Of TaskItem)
+  overload: Services.TaskManager.Tasks*
+- uid: Services.TaskManager.#ctor(System.String)
+  commentId: M:Services.TaskManager.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: TaskManager(string)
+  nameWithType: TaskManager.TaskManager(string)
+  fullName: Services.TaskManager.TaskManager(string)
+  type: Constructor
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: .ctor
+    path: src/Services/TaskManager.cs
+    startLine: 25
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public TaskManager(string filepath)
+    parameters:
+    - id: filepath
+      type: System.String
+      description: ''
+    content.vb: Public Sub New(filepath As String)
+  overload: Services.TaskManager.#ctor*
+  nameWithType.vb: TaskManager.New(String)
+  fullName.vb: Services.TaskManager.New(String)
+  name.vb: New(String)
+- uid: Services.TaskManager.Start
+  commentId: M:Services.TaskManager.Start
+  id: Start
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: TaskManager.Start()
+  fullName: Services.TaskManager.Start()
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: Start
+    path: src/Services/TaskManager.cs
+    startLine: 35
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public Task Start()
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Function Start() As Task
+  overload: Services.TaskManager.Start*
+- uid: Services.TaskManager.AddAsync(System.String,System.DateTime,Models.Priority,System.String)
+  commentId: M:Services.TaskManager.AddAsync(System.String,System.DateTime,Models.Priority,System.String)
+  id: AddAsync(System.String,System.DateTime,Models.Priority,System.String)
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: AddAsync(string, DateTime, Priority, string)
+  nameWithType: TaskManager.AddAsync(string, DateTime, Priority, string)
+  fullName: Services.TaskManager.AddAsync(string, System.DateTime, Models.Priority, string)
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: AddAsync
+    path: src/Services/TaskManager.cs
+    startLine: 64
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public Task AddAsync(string title, DateTime dueData, Priority priority, string description = "Нет описания")
+    parameters:
+    - id: title
+      type: System.String
+      description: ''
+    - id: dueData
+      type: System.DateTime
+      description: ''
+    - id: priority
+      type: Models.Priority
+      description: ''
+    - id: description
+      type: System.String
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Function AddAsync(title As String, dueData As Date, priority As Priority, description As String = "Нет описания") As Task
+  overload: Services.TaskManager.AddAsync*
+  nameWithType.vb: TaskManager.AddAsync(String, Date, Priority, String)
+  fullName.vb: Services.TaskManager.AddAsync(String, Date, Models.Priority, String)
+  name.vb: AddAsync(String, Date, Priority, String)
+- uid: Services.TaskManager.RemoveAsync(System.Int32)
+  commentId: M:Services.TaskManager.RemoveAsync(System.Int32)
+  id: RemoveAsync(System.Int32)
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: RemoveAsync(int)
+  nameWithType: TaskManager.RemoveAsync(int)
+  fullName: Services.TaskManager.RemoveAsync(int)
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: RemoveAsync
+    path: src/Services/TaskManager.cs
+    startLine: 76
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public Task RemoveAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Function RemoveAsync(id As Integer) As Task
+  overload: Services.TaskManager.RemoveAsync*
+  nameWithType.vb: TaskManager.RemoveAsync(Integer)
+  fullName.vb: Services.TaskManager.RemoveAsync(Integer)
+  name.vb: RemoveAsync(Integer)
+- uid: Services.TaskManager.UpdateTitleAsync(System.Int32,System.String)
+  commentId: M:Services.TaskManager.UpdateTitleAsync(System.Int32,System.String)
+  id: UpdateTitleAsync(System.Int32,System.String)
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateTitleAsync(int, string)
+  nameWithType: TaskManager.UpdateTitleAsync(int, string)
+  fullName: Services.TaskManager.UpdateTitleAsync(int, string)
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: UpdateTitleAsync
+    path: src/Services/TaskManager.cs
+    startLine: 88
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public Task UpdateTitleAsync(int id, string title)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ''
+    - id: title
+      type: System.String
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Function UpdateTitleAsync(id As Integer, title As String) As Task
+  overload: Services.TaskManager.UpdateTitleAsync*
+  nameWithType.vb: TaskManager.UpdateTitleAsync(Integer, String)
+  fullName.vb: Services.TaskManager.UpdateTitleAsync(Integer, String)
+  name.vb: UpdateTitleAsync(Integer, String)
+- uid: Services.TaskManager.UpdateDataAsync(System.Int32,System.DateTime)
+  commentId: M:Services.TaskManager.UpdateDataAsync(System.Int32,System.DateTime)
+  id: UpdateDataAsync(System.Int32,System.DateTime)
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateDataAsync(int, DateTime)
+  nameWithType: TaskManager.UpdateDataAsync(int, DateTime)
+  fullName: Services.TaskManager.UpdateDataAsync(int, System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: UpdateDataAsync
+    path: src/Services/TaskManager.cs
+    startLine: 100
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public Task UpdateDataAsync(int id, DateTime data)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ''
+    - id: data
+      type: System.DateTime
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Function UpdateDataAsync(id As Integer, data As Date) As Task
+  overload: Services.TaskManager.UpdateDataAsync*
+  nameWithType.vb: TaskManager.UpdateDataAsync(Integer, Date)
+  fullName.vb: Services.TaskManager.UpdateDataAsync(Integer, Date)
+  name.vb: UpdateDataAsync(Integer, Date)
+- uid: Services.TaskManager.UpdateDescriptionAsync(System.Int32,System.String)
+  commentId: M:Services.TaskManager.UpdateDescriptionAsync(System.Int32,System.String)
+  id: UpdateDescriptionAsync(System.Int32,System.String)
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateDescriptionAsync(int, string)
+  nameWithType: TaskManager.UpdateDescriptionAsync(int, string)
+  fullName: Services.TaskManager.UpdateDescriptionAsync(int, string)
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: UpdateDescriptionAsync
+    path: src/Services/TaskManager.cs
+    startLine: 112
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public Task UpdateDescriptionAsync(int id, string description)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ''
+    - id: description
+      type: System.String
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Function UpdateDescriptionAsync(id As Integer, description As String) As Task
+  overload: Services.TaskManager.UpdateDescriptionAsync*
+  nameWithType.vb: TaskManager.UpdateDescriptionAsync(Integer, String)
+  fullName.vb: Services.TaskManager.UpdateDescriptionAsync(Integer, String)
+  name.vb: UpdateDescriptionAsync(Integer, String)
+- uid: Services.TaskManager.UpdateStatusAsync(System.Int32)
+  commentId: M:Services.TaskManager.UpdateStatusAsync(System.Int32)
+  id: UpdateStatusAsync(System.Int32)
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateStatusAsync(int)
+  nameWithType: TaskManager.UpdateStatusAsync(int)
+  fullName: Services.TaskManager.UpdateStatusAsync(int)
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: UpdateStatusAsync
+    path: src/Services/TaskManager.cs
+    startLine: 123
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public Task UpdateStatusAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Function UpdateStatusAsync(id As Integer) As Task
+  overload: Services.TaskManager.UpdateStatusAsync*
+  nameWithType.vb: TaskManager.UpdateStatusAsync(Integer)
+  fullName.vb: Services.TaskManager.UpdateStatusAsync(Integer)
+  name.vb: UpdateStatusAsync(Integer)
+- uid: Services.TaskManager.UpdatePriorityAsync(System.Int32,Models.Priority)
+  commentId: M:Services.TaskManager.UpdatePriorityAsync(System.Int32,Models.Priority)
+  id: UpdatePriorityAsync(System.Int32,Models.Priority)
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: UpdatePriorityAsync(int, Priority)
+  nameWithType: TaskManager.UpdatePriorityAsync(int, Priority)
+  fullName: Services.TaskManager.UpdatePriorityAsync(int, Models.Priority)
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: UpdatePriorityAsync
+    path: src/Services/TaskManager.cs
+    startLine: 135
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public Task UpdatePriorityAsync(int id, Priority priority)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ''
+    - id: priority
+      type: Models.Priority
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Function UpdatePriorityAsync(id As Integer, priority As Priority) As Task
+  overload: Services.TaskManager.UpdatePriorityAsync*
+  nameWithType.vb: TaskManager.UpdatePriorityAsync(Integer, Priority)
+  fullName.vb: Services.TaskManager.UpdatePriorityAsync(Integer, Models.Priority)
+  name.vb: UpdatePriorityAsync(Integer, Priority)
+- uid: Services.TaskManager.Search(System.String)
+  commentId: M:Services.TaskManager.Search(System.String)
+  id: Search(System.String)
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: Search(string)
+  nameWithType: TaskManager.Search(string)
+  fullName: Services.TaskManager.Search(string)
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: Search
+    path: src/Services/TaskManager.cs
+    startLine: 146
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public List<TaskItem> Search(string prompt)
+    parameters:
+    - id: prompt
+      type: System.String
+      description: ''
+    return:
+      type: System.Collections.Generic.List{Models.TaskItem}
+      description: ''
+    content.vb: Public Function Search(prompt As String) As List(Of TaskItem)
+  overload: Services.TaskManager.Search*
+  nameWithType.vb: TaskManager.Search(String)
+  fullName.vb: Services.TaskManager.Search(String)
+  name.vb: Search(String)
+- uid: Services.TaskManager.GetAll
+  commentId: M:Services.TaskManager.GetAll
+  id: GetAll
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: TaskManager.GetAll()
+  fullName: Services.TaskManager.GetAll()
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: GetAll
+    path: src/Services/TaskManager.cs
+    startLine: 157
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public List<TaskItem> GetAll()
+    return:
+      type: System.Collections.Generic.List{Models.TaskItem}
+      description: ''
+    content.vb: Public Function GetAll() As List(Of TaskItem)
+  overload: Services.TaskManager.GetAll*
+- uid: Services.TaskManager.GetById(System.Int32)
+  commentId: M:Services.TaskManager.GetById(System.Int32)
+  id: GetById(System.Int32)
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: GetById(int)
+  nameWithType: TaskManager.GetById(int)
+  fullName: Services.TaskManager.GetById(int)
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: GetById
+    path: src/Services/TaskManager.cs
+    startLine: 168
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public TaskItem GetById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ''
+    return:
+      type: Models.TaskItem
+      description: ''
+    content.vb: Public Function GetById(id As Integer) As TaskItem
+  overload: Services.TaskManager.GetById*
+  exceptions:
+  - type: System.Collections.Generic.KeyNotFoundException
+    commentId: T:System.Collections.Generic.KeyNotFoundException
+    description: ''
+  nameWithType.vb: TaskManager.GetById(Integer)
+  fullName.vb: Services.TaskManager.GetById(Integer)
+  name.vb: GetById(Integer)
+- uid: Services.TaskManager.GetByStatus(System.Boolean)
+  commentId: M:Services.TaskManager.GetByStatus(System.Boolean)
+  id: GetByStatus(System.Boolean)
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: GetByStatus(bool)
+  nameWithType: TaskManager.GetByStatus(bool)
+  fullName: Services.TaskManager.GetByStatus(bool)
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: GetByStatus
+    path: src/Services/TaskManager.cs
+    startLine: 179
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public List<TaskItem> GetByStatus(bool status)
+    parameters:
+    - id: status
+      type: System.Boolean
+      description: ''
+    return:
+      type: System.Collections.Generic.List{Models.TaskItem}
+      description: ''
+    content.vb: Public Function GetByStatus(status As Boolean) As List(Of TaskItem)
+  overload: Services.TaskManager.GetByStatus*
+  exceptions:
+  - type: System.Collections.Generic.KeyNotFoundException
+    commentId: T:System.Collections.Generic.KeyNotFoundException
+    description: ''
+  nameWithType.vb: TaskManager.GetByStatus(Boolean)
+  fullName.vb: Services.TaskManager.GetByStatus(Boolean)
+  name.vb: GetByStatus(Boolean)
+- uid: Services.TaskManager.GetByPriority
+  commentId: M:Services.TaskManager.GetByPriority
+  id: GetByPriority
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: GetByPriority()
+  nameWithType: TaskManager.GetByPriority()
+  fullName: Services.TaskManager.GetByPriority()
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: GetByPriority
+    path: src/Services/TaskManager.cs
+    startLine: 187
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public void GetByPriority()
+    content.vb: Public Sub GetByPriority()
+  overload: Services.TaskManager.GetByPriority*
+- uid: Services.TaskManager.GetStatistics
+  commentId: M:Services.TaskManager.GetStatistics
+  id: GetStatistics
+  parent: Services.TaskManager
+  langs:
+  - csharp
+  - vb
+  name: GetStatistics()
+  nameWithType: TaskManager.GetStatistics()
+  fullName: Services.TaskManager.GetStatistics()
+  type: Method
+  source:
+    remote:
+      path: src/Services/TaskManager.cs
+      branch: main
+      repo: https://github.com/MortyKurka/TodoListFile.git
+    id: GetStatistics
+    path: src/Services/TaskManager.cs
+    startLine: 196
+  assemblies:
+  - todo-list-files
+  namespace: Services
+  summary: ''
+  example: []
+  syntax:
+    content: public string GetStatistics()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Function GetStatistics() As String
+  overload: Services.TaskManager.GetStatistics*
+references:
+- uid: Services
+  commentId: N:Services
+  href: Services.html
+  name: Services
+  nameWithType: Services
+  fullName: Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Services.TaskManager.Tasks*
+  commentId: Overload:Services.TaskManager.Tasks
+  href: Services.TaskManager.html#Services_TaskManager_Tasks
+  name: Tasks
+  nameWithType: TaskManager.Tasks
+  fullName: Services.TaskManager.Tasks
+- uid: System.Collections.Generic.List{Models.TaskItem}
+  commentId: T:System.Collections.Generic.List{Models.TaskItem}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<TaskItem>
+  nameWithType: List<TaskItem>
+  fullName: System.Collections.Generic.List<Models.TaskItem>
+  nameWithType.vb: List(Of TaskItem)
+  fullName.vb: System.Collections.Generic.List(Of Models.TaskItem)
+  name.vb: List(Of TaskItem)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Models.TaskItem
+    name: TaskItem
+    href: Models.TaskItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Models.TaskItem
+    name: TaskItem
+    href: Models.TaskItem.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Services.TaskManager.#ctor*
+  commentId: Overload:Services.TaskManager.#ctor
+  href: Services.TaskManager.html#Services_TaskManager__ctor_System_String_
+  name: TaskManager
+  nameWithType: TaskManager.TaskManager
+  fullName: Services.TaskManager.TaskManager
+  nameWithType.vb: TaskManager.New
+  fullName.vb: Services.TaskManager.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Services.TaskManager.Start*
+  commentId: Overload:Services.TaskManager.Start
+  href: Services.TaskManager.html#Services_TaskManager_Start
+  name: Start
+  nameWithType: TaskManager.Start
+  fullName: Services.TaskManager.Start
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Services.TaskManager.AddAsync*
+  commentId: Overload:Services.TaskManager.AddAsync
+  href: Services.TaskManager.html#Services_TaskManager_AddAsync_System_String_System_DateTime_Models_Priority_System_String_
+  name: AddAsync
+  nameWithType: TaskManager.AddAsync
+  fullName: Services.TaskManager.AddAsync
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Models.Priority
+  commentId: T:Models.Priority
+  parent: Models
+  href: Models.Priority.html
+  name: Priority
+  nameWithType: Priority
+  fullName: Models.Priority
+- uid: Models
+  commentId: N:Models
+  href: Models.html
+  name: Models
+  nameWithType: Models
+  fullName: Models
+- uid: Services.TaskManager.RemoveAsync*
+  commentId: Overload:Services.TaskManager.RemoveAsync
+  href: Services.TaskManager.html#Services_TaskManager_RemoveAsync_System_Int32_
+  name: RemoveAsync
+  nameWithType: TaskManager.RemoveAsync
+  fullName: Services.TaskManager.RemoveAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Services.TaskManager.UpdateTitleAsync*
+  commentId: Overload:Services.TaskManager.UpdateTitleAsync
+  href: Services.TaskManager.html#Services_TaskManager_UpdateTitleAsync_System_Int32_System_String_
+  name: UpdateTitleAsync
+  nameWithType: TaskManager.UpdateTitleAsync
+  fullName: Services.TaskManager.UpdateTitleAsync
+- uid: Services.TaskManager.UpdateDataAsync*
+  commentId: Overload:Services.TaskManager.UpdateDataAsync
+  href: Services.TaskManager.html#Services_TaskManager_UpdateDataAsync_System_Int32_System_DateTime_
+  name: UpdateDataAsync
+  nameWithType: TaskManager.UpdateDataAsync
+  fullName: Services.TaskManager.UpdateDataAsync
+- uid: Services.TaskManager.UpdateDescriptionAsync*
+  commentId: Overload:Services.TaskManager.UpdateDescriptionAsync
+  href: Services.TaskManager.html#Services_TaskManager_UpdateDescriptionAsync_System_Int32_System_String_
+  name: UpdateDescriptionAsync
+  nameWithType: TaskManager.UpdateDescriptionAsync
+  fullName: Services.TaskManager.UpdateDescriptionAsync
+- uid: Services.TaskManager.UpdateStatusAsync*
+  commentId: Overload:Services.TaskManager.UpdateStatusAsync
+  href: Services.TaskManager.html#Services_TaskManager_UpdateStatusAsync_System_Int32_
+  name: UpdateStatusAsync
+  nameWithType: TaskManager.UpdateStatusAsync
+  fullName: Services.TaskManager.UpdateStatusAsync
+- uid: Services.TaskManager.UpdatePriorityAsync*
+  commentId: Overload:Services.TaskManager.UpdatePriorityAsync
+  href: Services.TaskManager.html#Services_TaskManager_UpdatePriorityAsync_System_Int32_Models_Priority_
+  name: UpdatePriorityAsync
+  nameWithType: TaskManager.UpdatePriorityAsync
+  fullName: Services.TaskManager.UpdatePriorityAsync
+- uid: Services.TaskManager.Search*
+  commentId: Overload:Services.TaskManager.Search
+  href: Services.TaskManager.html#Services_TaskManager_Search_System_String_
+  name: Search
+  nameWithType: TaskManager.Search
+  fullName: Services.TaskManager.Search
+- uid: Services.TaskManager.GetAll*
+  commentId: Overload:Services.TaskManager.GetAll
+  href: Services.TaskManager.html#Services_TaskManager_GetAll
+  name: GetAll
+  nameWithType: TaskManager.GetAll
+  fullName: Services.TaskManager.GetAll
+- uid: System.Collections.Generic.KeyNotFoundException
+  commentId: T:System.Collections.Generic.KeyNotFoundException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keynotfoundexception
+  name: KeyNotFoundException
+  nameWithType: KeyNotFoundException
+  fullName: System.Collections.Generic.KeyNotFoundException
+- uid: Services.TaskManager.GetById*
+  commentId: Overload:Services.TaskManager.GetById
+  href: Services.TaskManager.html#Services_TaskManager_GetById_System_Int32_
+  name: GetById
+  nameWithType: TaskManager.GetById
+  fullName: Services.TaskManager.GetById
+- uid: Models.TaskItem
+  commentId: T:Models.TaskItem
+  parent: Models
+  href: Models.TaskItem.html
+  name: TaskItem
+  nameWithType: TaskItem
+  fullName: Models.TaskItem
+- uid: Services.TaskManager.GetByStatus*
+  commentId: Overload:Services.TaskManager.GetByStatus
+  href: Services.TaskManager.html#Services_TaskManager_GetByStatus_System_Boolean_
+  name: GetByStatus
+  nameWithType: TaskManager.GetByStatus
+  fullName: Services.TaskManager.GetByStatus
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Services.TaskManager.GetByPriority*
+  commentId: Overload:Services.TaskManager.GetByPriority
+  href: Services.TaskManager.html#Services_TaskManager_GetByPriority
+  name: GetByPriority
+  nameWithType: TaskManager.GetByPriority
+  fullName: Services.TaskManager.GetByPriority
+- uid: Services.TaskManager.GetStatistics*
+  commentId: Overload:Services.TaskManager.GetStatistics
+  href: Services.TaskManager.html#Services_TaskManager_GetStatistics
+  name: GetStatistics
+  nameWithType: TaskManager.GetStatistics
+  fullName: Services.TaskManager.GetStatistics
